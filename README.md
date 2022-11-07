@@ -11,7 +11,7 @@ Below is my solution to the problem.
 
 ### Infrastructure 
  
-I chose AWS Cloud Platform as I found it easiest to get started. I created a temporary account to get a $300 credit and utilized it as development environment.
+I chose AWS Cloud Platform as I found it easiest to get started. I created a temporary account to get a free tier credit and utilized it as development environment.
 
 ### Development Environment
 
