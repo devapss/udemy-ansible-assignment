@@ -11,11 +11,11 @@ Below is my solution to the problem.
 
 ### Infrastructure 
  
-I chose Google Cloud Platform as I found it easiest to get started. I created a temporary account to get a $300 credit and utilized it as development environment.
+I chose AWS Cloud Platform as I found it easiest to get started. I created a temporary account to get a $300 credit and utilized it as development environment.
 
 ### Development Environment
 
-I set up a local VM on Oracle Virtual Box as my Ansible Controller. There are some pre-requisites required on the Ansible Controller system to work with Google Cloud. Details are documented here Once the Ansible Controller was setup I proceeded to develop my project.
+I set up a AWS account crated three instances. There are some pre-requisites required on the Ansible Controller system to work with Google Cloud. Details are documented here Once the Ansible Controller was setup I proceeded to develop my project.
 
 ### Ansible Project
 
@@ -29,15 +29,15 @@ I decided to use tasks file for deploying VMs and create my own roles to configu
 
 Group Variables to have following properties:
 
-- **project_id:**  ID of my GCP project
-- **service_account_email:** ​ Service Account to connect to GCP
-- **credentials_file:** ​​ Credentials file to connect to GCP
+- **project_id:**  ID of my AWS project
+- **service_account_email:** ​ Service Account to connect to AWS
+- **credentials_file:** ​​ Credentials file to connect to AWS
 - **num_web_instances:** ​ Number of web instances to deploy
 - **db_name:** Database name
 - **db_user:** Database user to create
 - **db_password:** Password for the Database user
 - **machine_type:** Type of machine to deploy eg: n1-standard-1  
-​- **image:** Image of instance to deploy debian-7
+​- **image:** Image of instance to deploy UBUNTU-7
 - **instance_list:** An array containing list of servers to deploy
     
          - web-server-1,web-server-2
@@ -46,4 +46,4 @@ Group Variables to have following properties:
 - **db_user:** Database user
 - **db_user_password:** Database user password
 - **ansible_user:** User to connect to Compute Instances using gcloud compute ssh
-- **ansible_ssh_private_key_file:** Private key file to connect to Compute Instances using gcloud compute ssh
+- **ansible_ssh_private_key_file:** Private key file to connect to Compute Instances using AWS compute ssh
