@@ -1,4 +1,4 @@
-- include: deploy-gcp-instances.yml
+- include: deploy-AWS-instances.yml
 - include: configure-applications.yml
 - include: setup-networking.yml
 
